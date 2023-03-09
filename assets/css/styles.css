@@ -1,0 +1,206 @@
+@import url("./reset.css");
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf") format('truetype');
+}
+
+:root{
+    font-size: 18px;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* nav */
+
+nav ul li{
+    list-style-type: none;
+}
+
+
+
+nav ul li a:visited{
+    color: inherit;
+}
+
+nav ul{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+}
+
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    font-weight: 600;
+    position: relative;   
+
+}
+
+nav{
+    font-size: 20px;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 100%;
+    width: 300px;
+
+    background-color: rgb(0, 153, 255);
+    color: white;
+
+}
+
+.page-header{
+    flex-grow: 2;
+  font-size: 2rem;
+
+  display: flex;
+  flex-direction: row;
+
+align-items: center;
+}
+
+svg{
+    width: 40px;
+    height: 40px;
+
+    fill: white;
+}
+
+
+
+/* section */
+
+h3{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+padding: 50px;
+
+}
+
+.main{
+    width: 50%;
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.side{
+    width: 20%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
+.main > article{
+    width: 70%;
+}
+
+.main > article >p{
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 375px){
+    .navigation{
+        width: 100%;
+        font-size: 0.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+    .page-header{
+       justify-content: center;
+    }
+
+    main{
+        flex-direction: column;
+    padding-left: 10px;
+    padding-right: 0;
+
+    }
+
+    .main, .side{
+        width: 100%;
+    }
+
+    .side > article{
+        padding: 20px 0;
+    }
+
+    .main > article{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 0.7rem;
+    }
+
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+
+    nav ul{
+        flex-direction: row;
+        width: 50%;
+        height: 0;
+    }
+
+    body , .side{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+    }
+}
+
+@media screen and (min-width:376px ) and (max-width: 800px){
+    body{
+        background-color: antiquewhite;
+    }
+    .navigation{
+        height: 100vh;
+    }
+}
